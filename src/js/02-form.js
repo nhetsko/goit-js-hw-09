@@ -14,7 +14,7 @@ const { email, message } = form.elements;
 reloadPage();
 
 function onInputData(e) {
-  dataForm = { email: email.value, message: message.value };
+  dataForm = { email: email.trim().value, message: message.trim().value };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(dataForm));
 }
 
